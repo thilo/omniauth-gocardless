@@ -5,8 +5,8 @@ require "omniauth/gocardless/version"
 Gem::Specification.new do |s|
   s.name = "omniauth-gocardless"
   s.summary = "OmniAuth strategy for GoCardless"
-  s.email = "thilo@cobot.me"
-  s.homepage = "http://github.com/cobot/omniauth-gocardless"
+  s.email = "thilo@upstre.am"
+  s.homepage = "http://github.com/thilo/omniauth-gocardless"
   s.description = "OmniAuth strategy for GoCardless"
   s.authors = ["Thilo Utke"]
   s.version     = OmniAuth::Gocardless::VERSION
