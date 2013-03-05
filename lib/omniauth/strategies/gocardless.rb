@@ -31,9 +31,8 @@ module OmniAuth
       end
 
       def raw_info
-        access_token.params
-        access_token.options[:mode] = :header
-        @raw_info ||= access_token.get('/api/v1/merchants/').parsed
+        merchant_id = access_token.params['scope'].split(':').last
+        @raw_info ||= access_token.get("/api/v1/merchants/#{merchant_id}.json").parsed
       end
     end
   end

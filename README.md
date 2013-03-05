@@ -18,7 +18,7 @@ This gives you access to a variable `request.env['omniauth.auth']` in your authe
 
 * `uid` - the id of the user
 * `info` - `{'email' => '<user email>', 'name' => '<business name>', 'first_name' => '<first name>', 'last_name' => '<last name>'}`
-* 
+*  `extra` - `{'raw_info' => {'balance' => '<amount>', 'created_at' => '<date time with tz>', 'description' => '<Text>', 'hide_variable_amount' => '<bool>',  'id' => '<id of user>' 'name' => '<business name>', 'first_name' => '<first name>', 'last_name' => '<last name>', 'next_payout_amount' => <amount>, 'next_payout_date' => '<date time with tz>',  'pending_balance' => <amount> …}}`
 
 #### Options
 
