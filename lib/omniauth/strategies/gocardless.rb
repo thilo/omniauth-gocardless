@@ -3,7 +3,7 @@ module OmniAuth
   module Strategies
     class Gocardless < OmniAuth::Strategies::OAuth2
       option :name, 'gocardless'
-      option :redirect_uri, nil
+      option :callback_host, nil
       option :client_options, {
         :site => 'https://gocardless.com',
         :authorize_url => '/oauth/authorize',
@@ -27,7 +27,7 @@ module OmniAuth
       end
       
       def callback_url
-        options[:redirect_uri] || super
+        (options[:callback_host] || full_host) + script_name + callback_path
       end
 
       def raw_info

@@ -29,10 +29,10 @@ To authorize against your gocardless sandbox environment set the site url to `ht
         client_options: {site: 'https://sandbox.gocardless.com'}
     end
 
-To set a fixed redirect_uri e.g. if you call from different subdomains you can set it like this:
+To set a callback host e.g. if you call from different subdomains you can set it like this:
   
     Rails.application.config.middleware.use OmniAuth::Builder do
       provider :gocardless, '<client_id>', '<client_secret>', scope: 'manage_merchant', 
-        redirect_uri: 'https://cobot.me/'
+        callback_host: 'https://www.cobot.me'
     end
   
